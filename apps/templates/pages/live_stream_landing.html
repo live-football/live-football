@@ -1,0 +1,209 @@
+{% block header %}{% endblock header %} {% block content %}
+
+<!DOCTYPE html>
+<html>
+  {% comment %} <title>W3.CSS Template</title> {% endcomment %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+
+  <body onload="get_url_links()" style="background-color: black;">
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-wide w3-padding w3-card" style="background-color: brown;">
+        <a href="" style="text-decoration: none; color: white;" class="w3-bar-item"
+          ><b>DO</b> Ball</a
+        >
+        <!-- Float links to the right. Hide them on small screens -->
+      </div>
+    </div>
+
+    <!-- Page content -->
+    <div  style="margin-top: 70px">
+      <div id="banner" class="row" style="justify-content: center">
+        <div class="row mt-4">
+          <a href="https://www.xn--24-3qi4duc3a1a7o.com/"
+            ><img
+              src="https://www.goalclublive.com/goalclubv2/images/banner/20220210010848_44f4cc64319b0522343ae266aed5186a.gif"
+              alt=""
+              rel="nofollow"
+              style="width: 100%; height: auto"
+          /></a>
+        </div>
+
+        <div class="row mt-4">
+          <a href="http://macau8883.com/"
+            ><img
+              src="https://www.goalclublive.com/goalclubv2/images/banner/20220210010909_0a6b6eae9430e382322dfbfc1ce610bf.gif"
+              alt=""
+              rel="nofollow"
+              style="width: 100%; height: auto"
+          /></a>
+        </div>
+
+        <div class="row mt-4">
+          <a href="https://www.bit.ly/nu51515"
+            ><img
+              src="https://www.goalclublive.com/goalclubv2/images/banner/20210717113659_c21617c487c8e7721cebe0331a8d3080.gif"
+              alt=""
+              rel="nofollow"
+              style="width: 100%; height: auto"
+          /></a>
+        </div>
+      </div>
+
+      {% comment %} <div
+        id="paragraph"
+        class="row"
+        style="margin-top: 50px; justify-content: center"
+      >
+        <div class="row mt-4">
+          <h3>DoBall.com ดูบอลสด ดูบอลออนไลน์</h3>
+        </div>
+
+        <div class="row mt-4">
+          goalclub.tv เว็บไซต์ยอดนิยมในการ ดูบอลสด ดูบอลออนไลน์ ท่านจะได้รับชม
+          บอลสด ผ่านทางออนไลน์ได้ฟรี ซึ่งจะมี บอลสดวันนี้ ครบถ้วนทุกลีกดัง
+          ไม่ว่าจะเป็น ฟุตบอลพรีเมียร์ลีกอังกฤษ ฟุตบอลลาลีกาสเปน
+          ฟุตบอลบุนเดสลีกาเยอรมัน ฟุตบอลยูฟ่าแชมเปี้ยนลีก และ
+          ฟุตบอลลีกดังทั้งลีกเล็กลีกใหญ่อื่น ๆ อีกมากมายไม่ต้องไปตามหา วาปบอล
+          ที่ไหนอีกต่อไป สามารถดูได้ทั้งบนมือถือและคอมได้อย่างสะดวกทุกที่
+          ทุกเวลา ตามที่ท่านต้องการ เนื่องจากฟุตบอลที่มีการลงสนามในแต่ละวัน
+          มีทั้งลีกเล็กลีกใหญ่ ซึ่งบางคู่โดยเฉพาะลีกเล็ก ๆ
+          หรือลีกรองที่มีคนสนใจน้อย อาจจะไม่มีการถ่ายทอดสด
+          ดังนั้นทำให้เราไม่สามารถจะถ่ายทอดสดให้ท่านชมได้เช่นกัน
+          ดังนั้นเพื่อเป็นการไม่พลาดว่าวันนี้มีบอลลีกไหนคู่ไหนบ้าง
+          ท่านสามารถเช็คตารางการแข่งขันของบอลวันนี้ครบทุกคู่ทุกลีกได้ที่หน้า
+          โปรแกรมบอล ซึ่งถ้าคู่ไหนมีถ่ายทอดสดจะมีสัญลักษณ์ HD และ HD1
+          อยู่ในตารางตรงช่องถ่ายทอดสด
+        </div>
+      </div> {% endcomment %}
+      <div class="vdo_layout row mt-4 justify-content-center" style="margin-bottom: 100px;">
+        <div style="margin-top: 5%" id="vdo_player" autoplay></div>
+
+      </div>
+
+<footer class="mt-4" style="color: white; text-align: center;">
+  <p>Copyright © 2021-2022 doball.com</p>
+</footer>
+
+
+      <!-- End page content -->
+    </div>
+
+    <style>
+      .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: #555;
+      }
+
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+      }
+
+      .row {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    </style>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <script>
+      function get_url_links() {
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var src = url.searchParams.get("links");
+        var type = url.searchParams.get("tp");
+
+        // Youtube and ScoreBat
+
+        if (type == 0 || type == 1) {
+          prepareFrame(src);
+        }
+
+        function prepareFrame(src) {
+
+          var ifrm = document.createElement("iframe");
+
+          var html_height = window.screen.height;
+          var html_width = window.screen.width;
+
+          console.log(html_width, html_height)
+          var url_vdo = src + "?autoplay=1&mute=0"
+
+          use_html_width = 640
+          use_html_height = 480
+          if(html_width <= 700) {
+            use_html_width = html_width*(90/100)
+            use_html_height = use_html_width * (3/4)
+            
+          }
+
+          console.log(use_html_width, use_html_height)
+
+          ifrm.setAttribute("src", url_vdo);
+          ifrm.style.width = use_html_width+"px";
+          ifrm.style.height = use_html_height+"px";
+ 
+      
+          document.getElementById("vdo_player").appendChild(ifrm);
+        }
+      }
+    </script>
+
+
+    <style>
+
+
+      @media (max-width: 500px) {
+
+
+        #vdo_layout {
+          width: 320px;
+          height: 320px;
+        }
+
+
+      }
+    </style>
+    <!-- Footer -->
+  </body>
+</html>
+{% endblock content %}
